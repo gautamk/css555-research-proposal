@@ -1,0 +1,103 @@
+\documentclass[dvips,12pt]{article}
+
+% Any percent sign marks a comment to the end of the line
+
+% Every latex document starts with a documentclass declaration like this
+% The option dvips allows for graphics, 12pt is the font size, and article
+%   is the style
+
+\usepackage[pdftex]{graphicx}
+\usepackage{url}
+\usepackage{dirtytalk}
+% These are additional packages for "pdflatex", graphics, and to include
+% hyperlinks inside a document.
+
+\setlength{\oddsidemargin}{0.25in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{8.5in}
+\renewcommand{\refname}{Biblography}
+% These force using more of the margins that is the default style
+
+\begin{document}
+
+% Everything after this becomes content
+% Replace the text between curly brackets with your own
+
+\title{Research Whitepaper Outline: \\
+Software Models, Architecture and their Maintainance attributes}
+\author{Gautam Kumar\\
+Instructor: Prof. Mark Kochanski}
+\date{\today}
+
+% You can leave out "date" and it will be added automatically for today
+% You can change the "\today" date to any text you like
+
+\maketitle
+
+% This command causes the title to be created in the document
+
+\section{Introduction}
+
+Software Maintainability as a quality attribute can be simply defined as
+\say{The easiness of maintaining a software system.}\cite{zhu_software_2005}. The actual process of maintaining software systems is affected by a lot of related factors such as Analysability, Changeability, Testability and Adaptability as described by the ISO/IEC 25010:2011 standard. The goal of the proposed white paper is to analyse existing literature and propose metrics for evaluating software designs and architectures. 
+
+\section{Whitepaper Outline}
+\begin{enumerate}
+	\item Introduction
+	\begin{enumerate}
+		\item Problem Statement
+		\item Relevance and reasoning
+		\item Definition of uncommon / ambigious terms
+	\end{enumerate}
+	\item Software Maintainance
+		\begin{enumerate}
+			\item Describe Software maintainance and maintainability.
+			\item Define attributes which affect software maintainance.
+			\item Define metrics to quantify maintainability and its related attributes
+		\end{enumerate}
+	\item Analysis of Software Models
+	\begin{enumerate}
+		\item Describe a few common Software Models
+		\item Apply metrics calculations on Software Models
+		\item Analyse and interpret results. 
+	\end{enumerate}
+	\item Analysis of Software Architectures
+	\begin{enumerate}
+		\item Describe a few common Software Architectures
+		\item Compute maintainability metrics of common software architectures
+		\item Analyse and interpret results.
+	\end{enumerate}
+	\item Conclusion
+	\begin{enumerate}
+		\item Conclusions
+		\item Recommendations if any
+	\end{enumerate}
+\end{enumerate}
+
+\section{General Direction}
+The general focus of the proposed white paper would be to analyse and evaluate existing Software Models and architectures using maintainability metrics to discover patterns which can be used to reliabily predict the maintainability of a proposed software model or architecture. 
+
+Some research papers of interest are 
+
+\begin{itemize}
+\item \say{Distributed Scrum} \cite{sutherland_distributed_2007}\\
+ This paper talks about how the Agile model helped a globally distributed team build a large software project without compromising on important quality attributes such as Maintainability, Testability while still maintaining sufficient productivity. 
+
+\item \say{A Systematic Review of Software Maintainability Prediction and Metrics} \cite{riaz_systematic_2009} \\
+This paper evaluates various methods of predicting software maintainability for their effectiveness. 
+
+\item \say{Maintainability prediction: a regression analysis of measures of evolving systems} \cite{hayes_maintainability_2005} \\
+This paper proposes a method to predict the maintainability of various software systems. 
+
+\item \say{Building UML class diagram maintainability prediction models based on early metrics} \cite{genero_building_2007} \\
+UML class diagrams can be a useful way to predict the maintainability of a early software model / architecture by analysing the complexity and modifyability. This paper offers us a method to predict maintainability of such UML class diagrams.
+
+\end{itemize}
+
+
+\bibliographystyle{acm}
+\bibliography{research-outline}
+
+
+\end{document}
