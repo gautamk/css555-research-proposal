@@ -1,0 +1,83 @@
+\documentclass[dvips,12pt]{article}
+
+% Any percent sign marks a comment to the end of the line
+
+% Every latex document starts with a documentclass declaration like this
+% The option dvips allows for graphics, 12pt is the font size, and article
+%   is the style
+
+\usepackage[pdftex]{graphicx}
+\usepackage{url}
+\usepackage{dirtytalk}
+% These are additional packages for "pdflatex", graphics, and to include
+% hyperlinks inside a document.
+
+\setlength{\oddsidemargin}{0.25in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{8.5in}
+\renewcommand{\refname}{Biblography}
+% These force using more of the margins that is the default style
+
+\begin{document}
+
+% Everything after this becomes content
+% Replace the text between curly brackets with your own
+
+\title{Whitepaper Draft\\
+TODO: Title}
+\author{Gautam Kumar\\
+Instructor: Prof. Mark Kochanski}
+\date{\today}
+
+% You can leave out "date" and it will be added automatically for today
+% You can change the "\today" date to any text you like
+
+\maketitle
+\tableofcontents
+
+% This command causes the title to be created in the document
+
+\section{Introduction}
+
+
+
+%\section{Whitepaper Outline}
+%\begin{enumerate}
+%	\item Introduction
+%	\begin{enumerate}
+%		\item Problem Statement
+%		\item Relevance and reasoning
+%		\item Definition of uncommon / ambigious terms
+%	\end{enumerate}
+%	\item Software Maintainance
+%		\begin{enumerate}
+%			\item Describe Software maintainance and maintainability.
+%			\item Define attributes which affect software maintainance.
+%			\item Define metrics to quantify maintainability and its related attributes
+%		\end{enumerate}
+%	\item Analysis of Software Models
+%	\begin{enumerate}
+%		\item Describe a few common Software Models
+%		\item Apply metrics calculations on Software Models
+%		\item Analyse and interpret results. 
+%	\end{enumerate}
+%	\item Analysis of Software Architectures
+%	\begin{enumerate}
+%		\item Describe a few common Software Architectures
+%		\item Compute maintainability metrics of common software architectures
+%		\item Analyse and interpret results.
+%	\end{enumerate}
+%	\item Conclusion
+%	\begin{enumerate}
+%		\item Conclusions
+%		\item Recommendations if any
+%	\end{enumerate}
+%\end{enumerate}
+
+
+\bibliographystyle{acm}
+\bibliography{whitepaper-draft}
+
+
+\end{document}
