@@ -9,6 +9,7 @@
 \usepackage[pdftex]{graphicx}
 \usepackage{url}
 \usepackage{dirtytalk}
+\usepackage{fancyhdr}
 % These are additional packages for "pdflatex", graphics, and to include
 % hyperlinks inside a document.
 
@@ -17,18 +18,29 @@
 \setlength{\topmargin}{0in}
 \setlength{\textheight}{8.5in}
 \renewcommand{\refname}{Biblography}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\Author}
+
+\lhead{\Title}
 % These force using more of the margins that is the default style
 
+\title{ Whitepaper Draft\\
+Evaluating Maintainability in Software Architecture}
+\author{\Author \and
+Instructor: Prof. Mark Kochanski}
+\date{\today}
+
+
+\makeatletter
+\newcommand\Author{Gautam Kumar}
+\let\Title\@title
+\makeatother
 \begin{document}
 
 % Everything after this becomes content
 % Replace the text between curly brackets with your own
 
-\title{Whitepaper Draft\\
-Evaluating Maintainability in Software Architecture}
-\author{Gautam Kumar\\
-Instructor: Prof. Mark Kochanski}
-\date{\today}
 
 % You can leave out "date" and it will be added automatically for today
 % You can change the "\today" date to any text you like
