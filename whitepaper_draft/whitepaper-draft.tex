@@ -77,11 +77,30 @@ Lindvall et al define\cite{lindvall_empirically-based_2003} metrics to evaluate 
 
 The goal when constructing a software architecture is to reduce Inter module dependencies (CBM and CBMC) at the expense of increasing intra module dependencies. Conversely when comparing architectures the one with lower CBM and CBMC scores are better.
 
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{./coupling}
+\caption{An example of architectural design. Arrows indicate coupling between the classes. Source: \cite{lindvall_empirically-based_2003}}
+\label{fig:coupling}
+\end{figure}
+
+
 \subsection{Related quality attributes}
 Maintainability has a positive relationship with availability, flexibility, reliability, testability and a negative relationship with efficiency \cite{karl_software_2003}. This means that an increase in flexibility, for example, could potentially improve the maintainability of the software system. An increase in efficiency could potentially hamper maintainability.\\
 
 Understanding these trade off is important because indirect measurements as a factor of one of the aforementioned quality attributes can play a critical role when direct measurements of maintainability aren't available.
 
+\section{Further reading}
+
+\begin{itemize}
+\item Maintaining Maintainability \cite{ramage_maintaining_1998}\\
+In this paper the authors attempt to quantify the effects of people, organisation and the maintenance process as a metric to evaluate how these external factors affect maintainability in a software system.
+
+\item Software Architecture Evaluation Methods for Performance, Maintainability, Testability, and Portability \cite{mattsson_software_2006}\\
+This paper is a meta analysis of various methods of software architecture evaluation for to quantify quality attributes such as Performance, Testability, Maintainability and portability.
+
+\end{itemize}
+
+\section{Conclusion}
 
 %\section{Whitepaper Outline}
 %\begin{enumerate}
