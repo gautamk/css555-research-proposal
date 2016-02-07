@@ -34,12 +34,30 @@ Instructor: Prof. Mark Kochanski}
 % You can change the "\today" date to any text you like
 
 \maketitle
+\newpage
 \tableofcontents
-
+\newpage
 % This command causes the title to be created in the document
 
-\section{Introduction}
+\section{Software Maintenance and Maintainability}
+Software maintenance as defined by the International Organization for Standardization is the process of modifying a software product after delivery to correct faults or to improve any quality attributes \cite{_international_2006} \\
 
+Maintainability is a quality attribute that describes the ease of introducing modifications into the software systems. Maintainability has four sub-characteristics namely analysability, changeability, stability and testability\cite{_international_2006}.\\
+
+\subsection{Types of Maintenance}
+ISO defines four types of software maintenance, Corrective, Preventive, Adaptive and Perfective. \\
+
+Corrective maintenance refers to modifications done fix actual errors in the product while preventive maintenance is performed to introduce changes that can potentially prevent problems during the normal operation of the software product. \\
+
+Adaptive and perfective maintenance are modifications introduced to enhance the core functionality of the software by improving one or more of its quality attributes. 
+
+\section{Quantifying Maintainability}
+Understanding maintainability as a quality attribute is useful in learning the benefits of  its presence in a product but to derive value from the process of evaluating software maintainability we require a method of measuring maintainability as a metric.
+
+\subsection{Related quality attributes}
+Maintainability has a positive relationship with availability, flexibility, reliability, testability and a negative relationship with efficiency \cite{karl_software_2003}. This means that an increase in flexibility could potentially improve the maintainability of the software system. An increase in efficiency could potentially hamper maintainability.\\
+
+Understanding these trade off is important because indirect measurements as a factor of one of the aforementioned quality attributes can play a critical role when direct measurements of maintainability aren't available.
 
 
 %\section{Whitepaper Outline}
@@ -75,7 +93,7 @@ Instructor: Prof. Mark Kochanski}
 %	\end{enumerate}
 %\end{enumerate}
 
-
+\newpage
 \bibliographystyle{acm}
 \bibliography{whitepaper-draft}
 
