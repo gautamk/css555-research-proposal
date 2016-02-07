@@ -54,8 +54,17 @@ Adaptive and perfective maintenance are modifications introduced to enhance the 
 \section{Quantifying Maintainability}
 Understanding maintainability as a quality attribute is useful in learning the benefits of  its presence in a product but to derive value from the process of evaluating software maintainability we require a method of measuring maintainability as a metric.
 
+\subsection{UML based metrics}
+One way to measure maintainability is to analyse the class diagram. This is especially useful in projects which use an object oriented programming language and have an existing UML diagram describing the software structure. \\
+
+
+Genero et al \cite{genero_building_2003} describe an elegant way of predicting the maintainability of software early in the design phase by measuring the size and structural complexity of the software project. \\
+
+UML based metrics cannot independently describe the maintainability of a system because they suffer from the same basic flaw that UML adoption faces. Its the fact that UML isn't as widely adopted in an industry setting as one would expect. Though UML is extremely well defined and documented its complexity and the learning curve needed to effectively adopt UML in an organisation setting serves as a serious impediment to its adoption which in turn reduces the value of using an UML based metric in measuring the maintainability of a software architecture.
+
+
 \subsection{Related quality attributes}
-Maintainability has a positive relationship with availability, flexibility, reliability, testability and a negative relationship with efficiency \cite{karl_software_2003}. This means that an increase in flexibility could potentially improve the maintainability of the software system. An increase in efficiency could potentially hamper maintainability.\\
+Maintainability has a positive relationship with availability, flexibility, reliability, testability and a negative relationship with efficiency \cite{karl_software_2003}. This means that an increase in flexibility, for example, could potentially improve the maintainability of the software system. An increase in efficiency could potentially hamper maintainability.\\
 
 Understanding these trade off is important because indirect measurements as a factor of one of the aforementioned quality attributes can play a critical role when direct measurements of maintainability aren't available.
 
