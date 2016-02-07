@@ -73,7 +73,7 @@ Lindvall et al define\cite{lindvall_empirically-based_2003} metrics to evaluate 
 \item CIM coupling inside a module
 \end{enumerate}
 
-\say{CBM} is defined as the number of non-directional, distinct, inter-module references. Similarly \say{CBMC} is the number of non-directional, distinct, inter-module, class-to-class references for a module.
+\say{CBM} is defined as the number of non-directional, distinct, inter-module references. Similarly \say{CBMC} is the number of non-directional, distinct, inter-module, class-to-class references for a module. Figure \ref{fig:coupling} exhibits an example of how \say{CBM} can calculated from an architecture diagram.
 
 The goal when constructing a software architecture is to reduce Inter module dependencies (CBM and CBMC) at the expense of increasing intra module dependencies. Conversely when comparing architectures the one with lower CBM and CBMC scores are better.
 
@@ -89,7 +89,7 @@ Maintainability has a positive relationship with availability, flexibility, reli
 
 Understanding these trade off is important because indirect measurements as a factor of one of the aforementioned quality attributes can play a critical role when direct measurements of maintainability aren't available.
 
-\section{Further reading}
+\section{Other techniques for evaluating Maintainability}
 
 \begin{itemize}
 \item Maintaining Maintainability \cite{ramage_maintaining_1998}\\
@@ -98,9 +98,12 @@ In this paper the authors attempt to quantify the effects of people, organisatio
 \item Software Architecture Evaluation Methods for Performance, Maintainability, Testability, and Portability \cite{mattsson_software_2006}\\
 This paper is a meta analysis of various methods of software architecture evaluation for to quantify quality attributes such as Performance, Testability, Maintainability and portability.
 
+\item SAAM \cite{kazman_saam:_1994}
+
 \end{itemize}
 
 \section{Conclusion}
+Quality attributes such as performance and maintainability are usually not clearly defined, if at all, in the requirements specification because stakeholders do not generally understand their necessity or value. It is our job as software architects to evaluate and include maintainability as part of the architecture because maintainability offers one of the highest value in the longer run of any project. In this white paper we've highlighted some techniques of evaluating the maintainability of a software architecture before implementation and thus benchmarking the expectations for the production system.
 
 %\section{Whitepaper Outline}
 %\begin{enumerate}
