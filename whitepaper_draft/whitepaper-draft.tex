@@ -25,7 +25,7 @@
 % Replace the text between curly brackets with your own
 
 \title{Whitepaper Draft\\
-TODO: Title}
+Evaluating Maintainability in Software Architecture}
 \author{Gautam Kumar\\
 Instructor: Prof. Mark Kochanski}
 \date{\today}
@@ -58,10 +58,24 @@ Understanding maintainability as a quality attribute is useful in learning the b
 One way to measure maintainability is to analyse the class diagram. This is especially useful in projects which use an object oriented programming language and have an existing UML diagram describing the software structure. \\
 
 
-Genero et al \cite{genero_building_2003} describe an elegant way of predicting the maintainability of software early in the design phase by measuring the size and structural complexity of the software project. \\
+Genero et al \cite{genero_building_2003} \cite{genero_building_2007} describe an elegant way of predicting the maintainability of software early in the design phase by measuring the size and structural complexity of the software project. \\
 
-UML based metrics cannot independently describe the maintainability of a system because they suffer from the same basic flaw that UML adoption faces. Its the fact that UML isn't as widely adopted in an industry setting as one would expect. Though UML is extremely well defined and documented its complexity and the learning curve needed to effectively adopt UML in an organisation setting serves as a serious impediment to its adoption which in turn reduces the value of using an UML based metric in measuring the maintainability of a software architecture.
+UML based metrics cannot independently describe the maintainability of a system because they suffer from the same basic flaw that UML adoption faces. The fact that UML isn't as widely adopted in the software industry is the primary limiting factor. Though UML is extremely well defined and documented its complexity and the learning curve needed to effectively adopt UML in an organisation setting serves as a serious impediment to its adoption which in-turn reduces the value of using an UML based metric in measuring the maintainability of a software architecture.
 
+\subsection{Coupling as a metric}
+
+Coupling is the degree of interdependence between software modules \cite{_international_2006}. Low coupling is often associated with high readability and maintainability because data and control flow often tends to be well structured in systems with low coupling.\\
+
+Lindvall et al define\cite{lindvall_empirically-based_2003} metrics to evaluate the maintainability of a software architecture based on the degree of coupling between modules in the software system. The metrics defined by the authors are
+\begin{enumerate}
+\item CBM coupling-between-modules
+\item CBMC coupling-between-module-classes
+\item CIM coupling inside a module
+\end{enumerate}
+
+\say{CBM} is defined as the number of non-directional, distinct, inter-module references. Similarly \say{CBMC} is the number of non-directional, distinct, inter-module, class-to-class references for a module.
+
+The goal when constructing a software architecture is to reduce Inter module dependencies (CBM and CBMC) at the expense of increasing intra module dependencies. Conversely when comparing architectures the one with lower CBM and CBMC scores are better.
 
 \subsection{Related quality attributes}
 Maintainability has a positive relationship with availability, flexibility, reliability, testability and a negative relationship with efficiency \cite{karl_software_2003}. This means that an increase in flexibility, for example, could potentially improve the maintainability of the software system. An increase in efficiency could potentially hamper maintainability.\\
