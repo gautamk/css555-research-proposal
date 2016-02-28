@@ -72,7 +72,7 @@ Software maintenance as defined by the International Organization for Standardiz
 
 Maintainability is a quality attribute that describes the ease of introducing modifications into the software systems. Maintainability has four sub-characteristics namely analysability, changeability, stability and testability\cite{iso_international_2006}.\\
 
-The paper \cite{heitlager_practical_2007} provides a few easy to understand definitions which have been rephrased below.
+The paper \cite{heitlager_practical_2007} provides easy to understand definitions for analysability, changeability, stability and testability.
 
 \subparagraph{Analysability} is a measure of the ease or difficulty in diagnosing the system for deficiencies or identifying the parts that need modification.
 
@@ -83,11 +83,15 @@ The paper \cite{heitlager_practical_2007} provides a few easy to understand defi
 \subparagraph{Testability} is a measure of the ease or difficulty in testing the system after modifications have been completed.
 
 \subsection{Types of Maintenance}
-ISO defines four types of software maintenance, Corrective, Preventive, Adaptive and Perfective. \\
+ISO defines five types of software maintenance, Corrective, Preventive, Adaptive, Perfective and Emergency. \\
 
-Corrective maintenance refers to modifications done fix actual errors in the product while preventive maintenance is performed to introduce changes that can potentially prevent problems during the normal operation of the software product. \\
+\subparagraph{Corrective maintenance} refers to modifications done fix actual errors in the product. Corrective maintenance is usually to fix bugs that might have cropped up in previous versions of the software. 
 
-Adaptive and perfective maintenance are modifications introduced to enhance the core functionality of the software by improving one or more of its quality attributes. 
+\subparagraph{Preventive maintenance} is performed to introduce changes that can potentially prevent problems during the normal operation of the software product. Examples of preventive maintenance would be introducing security checks such as Input sanitization to prevent SQL Injection or XSS attacks, implementing validations on user input to prevent user from accidentally moving the system to an unstable state. 
+
+\subparagraph{Adaptive and Perfective maintenance} are modifications introduced to enhance the core functionality of the software by improving one or more of its quality attributes. An example of adaptive maintenance would be introducing a change request from the customer on the way certain features work while perfective maintenance would be improving performance or user experience of existing features.
+
+\subparagraph{Emergency maintenance} is any unscheduled modification of the system during emergency situations such as during an unexpected spike in load, a cyber attack or unplanned last minute changes before a presentation.
 
 \section{Quantifying Maintainability}
 Understanding maintainability as a quality attribute is useful in learning the benefits of its presence in a product but to derive value from the process of evaluating software maintainability we require a method of measuring maintainability as a metric.
