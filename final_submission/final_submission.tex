@@ -14,6 +14,15 @@
 \usepackage{fancyhdr}
 \usepackage[a4paper,colorlinks,breaklinks,unicode]{hyperref}
 \usepackage{color}
+\definecolor{DarkBlue}{RGB}{0,51,153}
+\hypersetup{
+  colorlinks,%
+  linktocpage =true,
+  citecolor=DarkBlue,%
+  filecolor=red,%
+  linkcolor=DarkBlue,%
+  urlcolor=green,
+} % colorlinks setting
 
 % These are additional packages for "pdflatex", graphics, and to include
 % hyperlinks inside a document.
@@ -59,9 +68,9 @@ A typical business software project spends 80\% of its time in maintainance \cit
 
 
 \section{Software Maintenance and Maintainability}
-Software maintenance as defined by the International Organization for Standardization is the process of modifying a software product after delivery to correct faults or to improve any quality attributes \cite{_international_2006} \\
+Software maintenance as defined by the International Organization for Standardization is the process of modifying a software product after delivery to correct faults or to improve any quality attributes \cite{iso_international_2006} \\
 
-Maintainability is a quality attribute that describes the ease of introducing modifications into the software systems. Maintainability has four sub-characteristics namely analysability, changeability, stability and testability\cite{_international_2006}.\\
+Maintainability is a quality attribute that describes the ease of introducing modifications into the software systems. Maintainability has four sub-characteristics namely analysability, changeability, stability and testability\cite{iso_international_2006}.\\
 
 \subsection{Types of Maintenance}
 ISO defines four types of software maintenance, Corrective, Preventive, Adaptive and Perfective. \\
@@ -91,7 +100,7 @@ UML based metrics cannot independently describe the maintainability of a system 
 
 \subsection{Coupling as a metric}
 
-Coupling is the degree of interdependence between software modules \cite{_international_2006}. Low coupling is often associated with high readability and maintainability because data and control flow often tends to be well structured in systems with low coupling.\\
+Coupling is the degree of interdependence between software modules \cite{iso_international_2006}. Low coupling is often associated with high readability and maintainability because data and control flow often tends to be well structured in systems with low coupling.\\
 
 Lindvall et al define\cite{lindvall_empirically-based_2003} metrics to evaluate the maintainability of a software architecture based on the degree of coupling between modules in the software system. The metrics defined by the authors are
 \begin{enumerate}
@@ -146,7 +155,7 @@ Quality attributes such as performance and maintainability are usually not clear
 %TODO Example of actual metrics
 
 \newpage
-\bibliographystyle{apa}
+\bibliographystyle{apalike}
 \bibliography{final_submission}
 
 
