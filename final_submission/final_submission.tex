@@ -64,13 +64,23 @@ Instructor: Prof. Mark Kochanski}
 % This command causes the title to be created in the document
 
 \section{Introduction}
-A typical business software project spends 80\% of its time in maintainance \cite{pigoski_practical_1996}. So its no wonder that maintainability is considered one of the most important quality attributes. Despite this assertion, evaluating and improving maintainability is largely procrastinated upon until the task becomes a signifanct burden on the budget. One of the ways to solve this problem would be to evaluate maintainability early on in the software development lifecycle and thus introduce a culture where engineers and architects think about maintainability as an important factor just like useability and performance. So with the goal of introducing a culture of maintainability early in mind, this white paper aims to help architects understand some the techniques of evaluating software architectures for maintainability.
+A typical business software project spends 80\% of its time in maintenance \cite{pigoski_practical_1996}. So its no wonder that maintainability is considered one of the most important quality attributes. Despite this assertion, evaluating and improving maintainability is largely procrastinated upon until the task becomes a significant burden on the budget. One of the ways to solve this problem would be to evaluate maintainability early on in the software development life-cycle and thus introduce a culture where engineers and architects think about maintainability as an important factor just like useability and performance. So with the goal of introducing a culture of maintainability early in mind, this white paper aims to help architects understand some the techniques of evaluating software architectures for maintainability.
 
 
 \section{Software Maintenance and Maintainability}
 Software maintenance as defined by the International Organization for Standardization is the process of modifying a software product after delivery to correct faults or to improve any quality attributes \cite{iso_international_2006} \\
 
 Maintainability is a quality attribute that describes the ease of introducing modifications into the software systems. Maintainability has four sub-characteristics namely analysability, changeability, stability and testability\cite{iso_international_2006}.\\
+
+The paper \cite{heitlager_practical_2007} provides a few easy to understand definitions which have been rephrased below.
+
+\subparagraph{Analysability} is a measure of the ease or difficulty in diagnosing the system for deficiencies or identifying the parts that need modification.
+
+\subparagraph{Changeability} is a measure of the ease or difficulty in making adaptations to the system in a reasonable amount of time.
+
+\subparagraph{Stability} is a measure of the ease or difficulty in maintaining the system in a consistent state during modifications.
+
+\subparagraph{Testability} is a measure of the ease or difficulty in testing the system after modifications have been completed.
 
 \subsection{Types of Maintenance}
 ISO defines four types of software maintenance, Corrective, Preventive, Adaptive and Perfective. \\
@@ -80,15 +90,15 @@ Corrective maintenance refers to modifications done fix actual errors in the pro
 Adaptive and perfective maintenance are modifications introduced to enhance the core functionality of the software by improving one or more of its quality attributes. 
 
 \section{Quantifying Maintainability}
-Understanding maintainability as a quality attribute is useful in learning the benefits of  its presence in a product but to derive value from the process of evaluating software maintainability we require a method of measuring maintainability as a metric.
+Understanding maintainability as a quality attribute is useful in learning the benefits of its presence in a product but to derive value from the process of evaluating software maintainability we require a method of measuring maintainability as a metric.
 
 \subsection{UML based metrics}
-One way to measure maintainability is to analyse the class diagram. This is especially useful in projects which use an object oriented programming language and have an existing UML diagram describing the software structure. \\
+One way to measure maintainability is to analyze the class diagram. This is especially useful in projects which use an object oriented programming language and have an existing UML diagram describing the software structure. \\
 
 
-Genero et al \cite{genero_building_2003} \cite{genero_building_2007} describe an elegant way of predicting the maintainability of software early in the design phase by measuring the size and structural complexity of the software project. \\
+In \cite{genero_building_2007} the authors describe an elegant way of predicting the maintainability of software early in the design phase by measuring the size and structural complexity of the software project. \\
 
-UML based metrics cannot independently describe the maintainability of a system because they suffer from the same basic flaw that UML adoption faces. The fact that UML isn't as widely adopted in the software industry is the primary limiting factor. Though UML is extremely well defined and documented its complexity and the learning curve needed to effectively adopt UML in an organisation setting serves as a serious impediment to its adoption which in-turn reduces the value of using an UML based metric in measuring the maintainability of a software architecture.
+UML based metrics cannot independently describe the maintainability of a system because they suffer from the same basic flaw that UML adoption faces. The fact that UML isn't as widely adopted in the software industry is the primary limiting factor. Though UML is extremely well defined and documented its complexity and the learning curve needed to effectively adopt UML in an organization setting serves as a serious impediment to its adoption which in-turn reduces the value of using an UML based metric in measuring the maintainability of a software architecture.
 
 
 \begin{wrapfigure}{l}{0.60\textwidth}
@@ -102,7 +112,7 @@ UML based metrics cannot independently describe the maintainability of a system 
 
 Coupling is the degree of interdependence between software modules \cite{iso_international_2006}. Low coupling is often associated with high readability and maintainability because data and control flow often tends to be well structured in systems with low coupling.\\
 
-Lindvall et al define\cite{lindvall_empirically-based_2003} metrics to evaluate the maintainability of a software architecture based on the degree of coupling between modules in the software system. The metrics defined by the authors are
+In \cite{lindvall_empirically-based_2003} the authors define metrics to evaluate the maintainability of a software architecture based on the degree of coupling between modules in the software system. The metrics defined by the authors are
 \begin{enumerate}
 \item CBM coupling-between-modules
 \item CBMC coupling-between-module-classes
@@ -121,15 +131,15 @@ Understanding these trade off is important because indirect measurements as a fa
 
 \section{Optimal Maintainability}
 
-The optimal maintainability of a software project is usually not clearly defined. Architects evaluating various architectures try to reach an arbitrary value for maintainability based on experience and gut-feel. This can be an issue because a simple measure of maintainability does not offer much value interms of end goals. Such lack of clarity in a resource constrained environment would force software architects to focus their immidiate efforts into other clearly defined quality attributes, thus disregarding maintainability until its too late.
+The optimal maintainability of a software project is usually not clearly defined. Architects evaluating various architectures try to reach an arbitrary value for maintainability based on experience and gut-feel. This can be an issue because a simple measure of maintainability does not offer much value in terms of end goals. Such lack of clarity in a resource constrained environment would force software architects to focus their immediate efforts into other clearly defined quality attributes, thus disregarding maintainability until its too late.
 
-Bosch et al \cite{bosch_assessing_2001} propose a technique for evaluating a software architecture with respect to optimal maintainability. The authors classify maintainance activities into three categories, Adding new components, Adding plugins to existing components and changing existing component code.
+Bosch et al \cite{bosch_assessing_2001} propose a technique for evaluating a software architecture with respect to optimal maintainability. The authors classify maintenance activities into three categories, Adding new components, Adding plug-ins to existing components and changing existing component code.
 
-The authors mention that earlier studies \cite{henry_quantitative_1997} \cite{maxwell_software_1996} have shown that productivity of developing new components is much higher than building plugins and modifying existing component code is shown to be significantly slower than building new components or plugins. So the goal of the first exercise is to build a maintainance profile with a set of possible change scenarios classified as adding new components, plugins or changing existing components. 
+The authors mention that earlier studies \cite{henry_quantitative_1997} \cite{maxwell_software_1996} have shown that productivity of developing new components is much higher than building plug-ins and modifying existing component code is shown to be significantly slower than building new components or plug-ins. So the goal of the first exercise is to build a maintenance profile with a set of possible change scenarios classified as adding new components, plug-ins or changing existing components. 
 
-The maintainance profile can now be used to compute the maintainance effort required for implementation. An impact analysis, which accounts for the number of components added, changed and also the number of plugins created, is also performed for the maintainance profile. 
+The maintenance profile can now be used to compute the maintenance effort required for implementation. An impact analysis, which accounts for the number of components added, changed and also the number of plug-ins created, is also performed for the maintenance profile. 
 
-Using the data from impact analysis and maintainance effort we can compute the optimal maintaince effort needed for the change scenario using the aforementioned assumption that an ideal software architecture would allow for change scenarios to be implemented purely by adding new components or in the case of small changes adding new plugins. 
+Using the data from impact analysis and maintenance effort we can compute the optimal maintenance effort needed for the change scenario using the aforementioned assumption that an ideal software architecture would allow for change scenarios to be implemented purely by adding new components or in the case of small changes adding new plug-ins. 
 
 
 \section{Other techniques for evaluating Maintainability}
