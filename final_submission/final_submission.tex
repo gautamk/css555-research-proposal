@@ -99,15 +99,21 @@ Understanding maintainability as a quality attribute is useful in learning the b
 
 Predicting maintainability of a software system early in its development life-cycle is a difficult problem containing a lot of uncertainty. Consequently the effective early prediction of software system depends on 	using indicators available on early development documents such as UML diagrams, SAVN diagrams and the requirements specification documents. 
 
-Uncertainty associated with quantifying maintainability can greatly be reduced if a reasonable amount of effort is invested in building detailed architecture documentation using tools such as UML diagrams and applying structured processes such as SAAM (Software Architecture Analysis Method) to evaluate the proposed architecture. 
+Uncertainty associated with quantifying maintainability can greatly be reduced if a reasonable amount of effort is invested in building detailed architecture documentation using tools such as UML diagrams and applying structured processes such as SAAM (Software Architecture Analysis Method) and ATAM (Architecture Tradeoff Analysis Method) to evaluate the proposed architecture. 
 
 \subsection{Quantifying Maintainability}
 \subsubsection{UML based metrics}
 One way to measure maintainability is to analyse the class diagram. This is especially useful in projects which use an object oriented programming language and have an existing UML diagram describing the software structure. \\
 
-In \cite{genero_building_2007} the authors describe an elegant way of predicting the maintainability of software early in the design phase by measuring the size and structural complexity of the software project. \\
+In \cite{genero_building_2007} the authors describe an elegant way of predicting the maintainability of software early in the design phase by measuring the size and structural complexity of the software project.
 
-UML based metrics cannot independently describe the maintainability of a system because they suffer from the same basic flaw that UML adoption faces. The fact that UML isn't as widely adopted in the software industry is the primary limiting factor. Though UML is extremely well defined and documented its complexity and the learning curve needed to effectively adopt UML in an organization setting serves as a serious impediment to its adoption which in-turn reduces the value of using an UML based metric in measuring the maintainability of a software architecture.
+\subparagraph{Size metrics} defined by \cite{genero_building_2007} are Number of Classes (NC), Number of Attributes (NA), Number of Methods (NM). These metrics are usually the easiest to quantify. As a standalone metric, size is a poor indicator of maintainability because A small project can potentially be unmaintainable because of highly coupled design while a project with a large number of classes might be easily maintainable due clean interfaces and loose coupling. As a consequence size metrics are used in combination with other factors to come up with a maintainability score.
+
+\subparagraph{Structural complexity metrics} as defined by \cite{genero_building_2007} are Number of Associations (NASSOC), Number of Aggregations (NAGG), Number of Dependencies (NDEP), Number of Generalisations (NGEN), Number of Generalisation hierarchies (NGENH), Number on Generalisation hierarchies (NAGGH). Structural complexity metrics are relatively harder to measure when compared to size metrics but offer a much better understanding of the interdependencies between components on the system.\\
+
+\subparagraph{Conclusions} from \cite{genero_building_2007} are that Understandability/Analysablility and Modifiability/Changeability are affected by measures of NAGGH, NGENH and NA.
+
+\subparagraph{The primary issue with } UML based metrics is that they cannot independently describe the maintainability of a system because they suffer from the same basic flaw that UML adoption faces. The fact that UML isn't as widely adopted in the software industry is the primary limiting factor. Though UML is extremely well defined and documented its complexity and the learning curve needed to effectively adopt it in an organization setting serves as a serious impediment to its adoption which in-turn reduces the value of using an UML based metric in measuring the maintainability of a software architecture.
 
 \subsubsection{Coupling as a metric}
 
@@ -132,9 +138,19 @@ In \cite{lindvall_empirically-based_2003} the authors define metrics to evaluate
 
 The goal when constructing a software architecture is to reduce Inter module dependencies (CBM and CBMC) at the expense of increasing intra module dependencies. Conversely when comparing architectures the one with lower CBM and CBMC scores are better.
 
+\begin{wrapfigure}{H}{0.60\textwidth}
+	\includegraphics[scale=0.35]{qualityAttributeRelation.png} 
+	\caption{Maintianability and related quality attributes Source:\cite{morgan_implementing_2007}}
+	\label{fig:qualityAttrs}
+\end{wrapfigure}
+
 
 \subsubsection{Related quality attributes}
 Maintainability has a positive relationship with availability, flexibility, reliability, testability and a negative relationship with efficiency \cite{karl_software_2003}. This means that an increase in flexibility, for example, could potentially improve the maintainability of the software system. An increase in efficiency could potentially hamper maintainability.\\
+
+
+
+These trade offs are explained further in Microsoft's article on the topic \cite{morgan_implementing_2007} where the author describes the relation between various quality attributes using an elegant chart in figure  \ref{fig:qualityAttrs}
 
 Understanding these trade off is important because indirect measurements as a factor of one of the aforementioned quality attributes can play a critical role when direct measurements of maintainability aren't available.
 
@@ -166,10 +182,8 @@ This paper is a meta analysis of various methods of software architecture evalua
 \section{Conclusion}
 Quality attributes such as performance and maintainability are usually not clearly defined, if at all, in the requirements specification because stakeholders do not generally understand their necessity or value. It is our job as software architects to evaluate and include maintainability as part of the architecture because maintainability offers one of the highest value in the longer run of any project. In this white paper we've highlighted some techniques of evaluating the maintainability of a software architecture before implementation and thus benchmarking the expectations for the production system.
 
-%TODO explain different types of maintenance
 %TODO explain comparisons between maintainability and other quality attributes
 %TODO explain give a direction in the conclusion
-%TODO elaborate UML as a metric
 %TODO Why do any of these metrics exist
 %TODO Example of actual metrics
 
