@@ -134,25 +134,68 @@ In \cite{lindvall_empirically-based_2003} the authors define metrics to evaluate
 \item CIM coupling inside a module
 \end{enumerate}
 
+\begin{wrapfigure}{H}{0.50\textwidth}
+	\includegraphics[scale=0.45]{ems1.png} 
+	\caption{EMS1 \cite{lindvall_empirically-based_2003}}
+	\label{fig:ems1}
+\end{wrapfigure}
+
 \say{CBM} is defined as the number of non-directional, distinct, inter-module references. Similarly \say{CBMC} is the number of non-directional, distinct, inter-module, class-to-class references for a module. Figure \ref{fig:coupling} exhibits an example of how \say{CBM} can calculated from an architecture diagram.
+
 
 The goal when constructing a software architecture is to reduce Inter module dependencies (CBM and CBMC) at the expense of increasing intra module dependencies. Conversely when comparing architectures the one with lower CBM and CBMC scores are better.
 
-\begin{wrapfigure}{H}{0.60\textwidth}
-	\includegraphics[scale=0.35]{qualityAttributeRelation.png} 
-	\caption{Maintianability and related quality attributes Source:\cite{morgan_implementing_2007}}
-	\label{fig:qualityAttrs}
+
+
+\subparagraph{An sample} comparison of two designs from \cite{lindvall_empirically-based_2003} is shown in figure \ref{fig:ems1} and \ref{fig:ems2}. Each architecture has an expected coupling measure as elucidated by the table in figure \ref{fig:emsExpectations}. When EMS1 and EMS2 are evaluated the coupling measures obtained are shown in Figure \ref{fig:ems1Table} and \ref{fig:ems2Table}. From these tables we can easily come to the conclusion that EMS2 has lower overall coupling except in the Mediator and Common modules which is intended thus we can conclude that EMS2 [\ref{fig:ems2}] is more maintainable than EMS1 [\ref{fig:ems1}].
+
+
+
+\begin{wrapfigure}{H}{0.50\textwidth}
+	\includegraphics[scale=0.45]{ems2.png} 
+	\caption{EMS2 \cite{lindvall_empirically-based_2003}}
+	\label{fig:ems2}
 \end{wrapfigure}
 
+
+\begin{wrapfigure}{H}{0.50\textwidth}
+	\includegraphics[scale=0.29]{emsExpectations.png} 
+	\caption{Coupling expectations of Figure \ref{fig:ems1} and \ref{fig:ems2} source:\cite{lindvall_empirically-based_2003}}
+	\label{fig:emsExpectations}
+\end{wrapfigure}
+
+
+\begin{wrapfigure}{H}{1\textwidth}
+	\includegraphics[scale=0.7]{ems1Table.png} 
+	\caption{Coupling measures for EMS1 [\ref{fig:ems1}] \cite{lindvall_empirically-based_2003}}
+	\label{fig:ems1Table}
+\end{wrapfigure}
+
+\begin{wrapfigure}{H}{1\textwidth}
+	\includegraphics[scale=0.7]{ems2Table.png} 
+	\caption{Coupling measures for EMS2 [\ref{fig:ems2}] \cite{lindvall_empirically-based_2003}}
+	\label{fig:ems2Table}
+\end{wrapfigure}
 
 \subsubsection{Related quality attributes}
 Maintainability has a positive relationship with availability, flexibility, reliability, testability and a negative relationship with efficiency \cite{karl_software_2003}. This means that an increase in flexibility, for example, could potentially improve the maintainability of the software system. An increase in efficiency could potentially hamper maintainability.\\
 
 
+\begin{wrapfigure}{H}{0.5\textwidth}
+	\includegraphics[scale=0.3]{qualityAttributeRelation.png} 
+	\caption{Maintianability and related quality attributes Source:\cite{morgan_implementing_2007}}
+	\label{fig:qualityAttrs}
+\end{wrapfigure}
 
-These trade offs are explained further in Microsoft's article on the topic \cite{morgan_implementing_2007} where the author describes the relation between various quality attributes using an elegant chart in figure  \ref{fig:qualityAttrs}
 
-Understanding these trade off is important because indirect measurements as a factor of one of the aforementioned quality attributes can play a critical role when direct measurements of maintainability aren't available.
+
+\subparagraph{Maintainability and Availability:} Availability is a measure of the portion of time that the system is functional and working\cite{microsoft_quality_2016}. Consequently the higher the maintainability the better the availability of the system because issues are easier to identify and fix.
+
+\subparagraph{Maintainability and Reliability: } Reliability is measured as the probability that a system will not fail and that it will perform its intended function for a specified time interval \cite{microsoft_quality_2016}. This attribute too has a logically positive relationship with Maintainability because reliability is often achieved through an iterative process and maintainability facilitates that iterative process.
+
+\subparagraph{Maintainability and Efficiency: } Maintainability can potentially have a negative impact on performance / efficiency or vice versa because highly efficient code might need to use some low level tricks which would dramatically reduce readability and thus have a negative impact on maintainability. Conversely a maintainable system might be too loosely coupled and offer multiple layers of abstraction which would cause a noticeable impact on performance or efficiency.
+
+These trade offs are explained further in Microsoft's article on the topic \cite{morgan_implementing_2007} where the author describes the relation between various quality attributes using an elegant chart in figure  \ref{fig:qualityAttrs}. Understanding these trade off is important because indirect measurements as a factor of one of the aforementioned quality attributes can play a critical role when direct measurements of maintainability aren't available.
 
 \subsection{Optimal Maintainability}
 
@@ -176,16 +219,15 @@ In this paper the authors attempt to quantify the effects of people, organisatio
 \item Software Architecture Evaluation Methods for Performance, Maintainability, Testability, and Portability \cite{mattsson_software_2006}\\
 This paper is a meta analysis of various methods of software architecture evaluation for to quantify quality attributes such as Performance, Testability, Maintainability and portability.
 
-
 \end{itemize}
 
 \section{Conclusion}
 Quality attributes such as performance and maintainability are usually not clearly defined, if at all, in the requirements specification because stakeholders do not generally understand their necessity or value. It is our job as software architects to evaluate and include maintainability as part of the architecture because maintainability offers one of the highest value in the longer run of any project. In this white paper we've highlighted some techniques of evaluating the maintainability of a software architecture before implementation and thus benchmarking the expectations for the production system.
 
-%TODO explain comparisons between maintainability and other quality attributes
+
 %TODO explain give a direction in the conclusion
-%TODO Why do any of these metrics exist
-%TODO Example of actual metrics
+%TODO XX -- Why do any of these metrics exist
+
 
 \newpage
 \bibliographystyle{apalike}
